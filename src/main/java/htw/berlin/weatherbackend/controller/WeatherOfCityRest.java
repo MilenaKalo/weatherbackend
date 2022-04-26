@@ -29,7 +29,7 @@ public class WeatherOfCityRest {
         //wenn city nicht null dann ok sonst not Found
         return city!= null ? ResponseEntity.ok(city) : ResponseEntity.notFound().build();
     }
-    //Test funktioniert nicht, nochmal prüfen
+
     @PostMapping(path = "/api/v1/weatherofcity")
     public ResponseEntity<Void> createCity(@RequestBody CityManipulationRequest request) throws URISyntaxException {
          var city = cityService.create(request);

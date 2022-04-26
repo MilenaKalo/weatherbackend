@@ -1,7 +1,7 @@
 package htw.berlin.weatherbackend.controller;
 
 public class CityManipulationRequest {
-
+//Test for Heroku deployment
     private String name;
     private String unit;
     private int temp;
