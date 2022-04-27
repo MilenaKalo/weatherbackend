@@ -14,4 +14,4 @@ jobs:
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "htwweatherapp" #Must be unique in Heroku
-          heroku_email: "s0563483@htw-berlin.de"
+          heroku_email: "s0580158@htw-berlin.de"
