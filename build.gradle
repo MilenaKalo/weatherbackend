@@ -23,6 +23,8 @@ dependencies {
 	implementation 'org.postgresql:postgresql:42.3.4'
 	// https://mvnrepository.com/artifact/com.h2database/h2
 	testImplementation 'com.h2database:h2:2.1.212'
+	implementation 'org.json:json:20171018'
+	implementation 'com.squareup.okhttp3:okhttp:3.14.6'
 }
 
 tasks.named('test') {

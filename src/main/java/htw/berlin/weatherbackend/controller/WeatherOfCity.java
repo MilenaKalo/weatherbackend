@@ -1,5 +1,8 @@
 package htw.berlin.weatherbackend.controller;
 
+import org.springframework.stereotype.Component;
+
+//@Component
 public class WeatherOfCity {
 
     private long id;
