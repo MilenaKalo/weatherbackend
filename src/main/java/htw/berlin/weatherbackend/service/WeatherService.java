@@ -2,6 +2,8 @@ package htw.berlin.weatherbackend.service;
 
 
 import htw.berlin.weatherbackend.controller.WeatherOfCity;
+import htw.berlin.weatherbackend.persistence.CityEntity;
+import htw.berlin.weatherbackend.persistence.CityRepository;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -19,21 +21,21 @@ import java.net.http.HttpResponse;
 
 @Service
 public class WeatherService {
-    /*
-    @Autowired
-    private WeatherOfCity weatherOfCity;
+
+
+   private WeatherOfCity city;
     private OkHttpClient client;
     private Response response;
     private String cityName;
     private String unit;
-    private String APIkey = "8f72af7c99ac2ff422253044302e41c7";
+    private final String APIkey = "8f72af7c99ac2ff422253044302e41c7";
 
 
 
     public JSONObject getWeather(){
         client = new OkHttpClient();  //using OKHTTP dependency . You have to add this mannually form OKHTTP website
-        okhttp3.Request request = new Request.Builder()
-            .url("http://api.openweathermap.org/data/2.5/weather?q="+weatherOfCity.getName()+"&units="+weatherOfCity.getUnit()+"&appid="+APIkey)
+        Request request = new Request.Builder()
+            .url("http://api.openweathermap.org/data/2.5/weather?q="+city.getName()+"&units="+city.getUnit()+"&appid="+APIkey)
             .build();
 
         try {
@@ -44,6 +46,8 @@ public class WeatherService {
         }
         return null;
     }
+
+
     public JSONArray returnWeatherArray() throws JSONException {
         JSONArray weatherJsonArray = getWeather().getJSONArray("weather");
         return weatherJsonArray;
@@ -65,5 +69,5 @@ public class WeatherService {
         return sys;
     }
 
-*/
+
 }
