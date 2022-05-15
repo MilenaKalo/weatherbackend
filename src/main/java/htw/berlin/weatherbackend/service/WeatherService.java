@@ -2,27 +2,20 @@ package htw.berlin.weatherbackend.service;
 
 
 import htw.berlin.weatherbackend.controller.WeatherOfCity;
-import htw.berlin.weatherbackend.persistence.CityEntity;
-import htw.berlin.weatherbackend.persistence.CityRepository;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 
-@Service
+//@Service
 public class WeatherService {
 
-
+/*
    private WeatherOfCity city;
     private OkHttpClient client;
     private Response response;
@@ -69,5 +62,5 @@ public class WeatherService {
         return sys;
     }
 
-
+*/
 }

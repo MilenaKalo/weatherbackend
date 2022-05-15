@@ -12,6 +12,9 @@ public class CityManipulationRequest {
         this.temp = temp;
     }
 
+    public CityManipulationRequest() {
+    }
+
     public String getName() {
         return name;
     }
