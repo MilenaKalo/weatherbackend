@@ -9,6 +9,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 public class WeatherOfCityRest {
 
    private final CityService cityService;
