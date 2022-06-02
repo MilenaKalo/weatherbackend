@@ -49,8 +49,6 @@ public class CityService {
         var cityEntity = city.get();
         // ID ist schon vergeben deswegen weiß repo dass es hier nur updaten soll
         cityEntity.setName(request.getName());
-        cityEntity.setUnit(request.getUnit());
-        cityEntity.setTemp(request.getTemp());
 
         cityEntity= cityRepository.save(cityEntity);
 
@@ -59,7 +57,7 @@ public class CityService {
     }
 
     public WeatherOfCity create(CityManipulationRequest request){
-        var cityEntity = new CityEntity(request.getName(), request.getUnit(), request.getTemp());
+        var cityEntity = new CityEntity(request.getName());
         cityEntity= cityRepository.save(cityEntity);
         return transformEntity(cityEntity);
     }
@@ -67,8 +65,7 @@ public class CityService {
     private WeatherOfCity transformEntity (CityEntity cityEntity){
         return new WeatherOfCity(
                 cityEntity.getId(),
-                cityEntity.getName(),
-                cityEntity.getUnit(),
-                cityEntity.getTemp());
+                cityEntity.getName());
+
     }
 }

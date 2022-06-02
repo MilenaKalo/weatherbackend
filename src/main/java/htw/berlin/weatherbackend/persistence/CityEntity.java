@@ -13,19 +13,11 @@ public class CityEntity {
     @Column(name = "cityname", nullable = false)
     private String name;
 
-    @Column(name = "unit", nullable = false)
-    private String unit;
-
-    @Column(name = "temprature")
-    private int temp;
-
     public CityEntity() {
     }
 
-    public CityEntity(String name, String unit, int temp) {
+    public CityEntity(String name) {
         this.name = name;
-        this.unit = unit;
-        this.temp = temp;
     }
 
     public long getId() {
@@ -41,19 +33,4 @@ public class CityEntity {
         this.name = name;
     }
 
-    public String getUnit() {
-        return unit;
-    }
-
-    public void setUnit(String unit) {
-        this.unit = unit;
-    }
-
-    public int getTemp() {
-        return temp;
-    }
-
-    public void setTemp(int temp) {
-        this.temp = temp;
-    }
 }

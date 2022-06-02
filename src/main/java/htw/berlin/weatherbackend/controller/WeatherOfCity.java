@@ -2,19 +2,17 @@ package htw.berlin.weatherbackend.controller;
 
 import org.springframework.stereotype.Component;
 
-//@Component
+
 public class WeatherOfCity {
 
     private long id;
     private String name;
-    private String unit;
-    private int temp;
 
-    public WeatherOfCity(long id, String name, String unit, int temp) {
+
+    public WeatherOfCity(long id, String name) {
         this.id = id;
         this.name = name;
-        this.unit = unit;
-        this.temp = temp;
+
     }
 
     public long getId() {
@@ -33,19 +31,5 @@ public class WeatherOfCity {
         this.name = name;
     }
 
-    public String getUnit() {
-        return unit;
-    }
 
-    public void setUnit(String unit) {
-        this.unit = unit;
-    }
-
-    public int getTemp() {
-        return temp;
-    }
-
-    public void setTemp(int temp) {
-        this.temp = temp;
-    }
 }

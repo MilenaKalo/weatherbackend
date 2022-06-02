@@ -1,15 +1,20 @@
 package htw.berlin.weatherbackend.controller;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 public class CityManipulationRequest {
 //Test for Heroku deployment
+
+    // city name darf nicht leer sein und muss eine Länge von mindestens 3 Zeichen haben
+    @NotBlank
+    @Size(min= 3, message = "Please provide a cityname with 3 characters or more")
     private String name;
-    private String unit;
-    private int temp;
+
 
     public CityManipulationRequest(String name, String unit, int temp) {
         this.name = name;
-        this.unit = unit;
-        this.temp = temp;
+
     }
 
     public CityManipulationRequest() {
@@ -23,19 +28,5 @@ public class CityManipulationRequest {
         this.name = name;
     }
 
-    public String getUnit() {
-        return unit;
-    }
 
-    public void setUnit(String unit) {
-        this.unit = unit;
-    }
-
-    public int getTemp() {
-        return temp;
-    }
-
-    public void setTemp(int temp) {
-        this.temp = temp;
-    }
 }
