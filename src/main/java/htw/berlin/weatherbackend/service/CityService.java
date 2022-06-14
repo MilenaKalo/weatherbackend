@@ -15,6 +15,7 @@ public class CityService {
     private final CityRepository cityRepository;
 
     public CityService(CityRepository cityRepository){
+
         this.cityRepository = cityRepository;
     }
 
@@ -62,7 +63,7 @@ public class CityService {
         return transformEntity(cityEntity);
     }
 
-    private WeatherOfCity transformEntity (CityEntity cityEntity){
+    public WeatherOfCity transformEntity (CityEntity cityEntity){
         return new WeatherOfCity(
                 cityEntity.getId(),
                 cityEntity.getName());
