@@ -12,7 +12,7 @@ public class CityManipulationRequest {
     private String name;
 
 
-    public CityManipulationRequest(String name, String unit, int temp) {
+    public CityManipulationRequest(String name) {
         this.name = name;
 
     }
