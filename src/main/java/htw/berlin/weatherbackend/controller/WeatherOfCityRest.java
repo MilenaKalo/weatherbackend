@@ -36,7 +36,7 @@ public class WeatherOfCityRest {
     @PostMapping(path = "/api/v1/weatherofcity")
     public ResponseEntity<Void> createCity( @Valid @RequestBody CityManipulationRequest request) throws URISyntaxException {
         var city = cityService.create(request);
-        URI uri = new URI("/api/v1/persons/" + city.getId());
+        URI uri = new URI("/api/v1/weatherofcity/" + city.getId());
         return ResponseEntity
                 .created(uri)
                 .header("Access-Control-Expose-Headers", "Location")
