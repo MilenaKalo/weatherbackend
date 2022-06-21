@@ -7,7 +7,7 @@ public class CityManipulationRequest {
 //Test for Heroku deployment
 
     // city name darf nicht leer sein und muss eine Länge von mindestens 3 Zeichen haben
-    @NotBlank
+    @NotBlank(message = "Blank Request" )
     @Size(min= 3, message = "Please provide a cityname with 3 characters or more")
     private String name;
 
