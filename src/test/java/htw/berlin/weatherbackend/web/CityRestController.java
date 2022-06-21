@@ -30,6 +30,7 @@ public class CityRestController {
     @MockBean
     private CityService cityService;
 
+
     @Test
     @DisplayName("should return found citys from city service")
     void should_return_found_city_from_citys_service() throws Exception {

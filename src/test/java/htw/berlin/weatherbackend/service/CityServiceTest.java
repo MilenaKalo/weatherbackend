@@ -41,6 +41,7 @@ public class CityServiceTest implements WithAssertions{
         assertThat(result).isTrue();
     }
 
+
     @Test
     @DisplayName("should return false if city to delete does not exist")
     void should_return_false_if_city_to_delete_does_not_exist() {
