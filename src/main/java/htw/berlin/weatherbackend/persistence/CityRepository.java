@@ -9,6 +9,7 @@ import java.util.List;
 public interface CityRepository extends JpaRepository<CityEntity, Long> {
 // für Datenbank
     List<CityEntity> findAllByName (String name);
+    String findByName(String name);
 
 
 

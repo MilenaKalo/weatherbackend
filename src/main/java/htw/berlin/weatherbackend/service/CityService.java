@@ -59,14 +59,15 @@ public class CityService {
 
     public WeatherOfCity create(CityManipulationRequest request){
         // wenn die stadt schon vorhanden ist dann soll es nicht gehen
-        if(cityRepository.findAllByName(request.getName())!= null){
+      //   String e = cityRepository.findByName(request.getName());
+      //  if(e.equals(request.getName())== false){
             var cityEntity = new CityEntity(request.getName());
             cityEntity= cityRepository.save(cityEntity);
             return transformEntity(cityEntity);
         }
-        else return null;
+     //   else return null;
 
-    }
+    //}
 
     public WeatherOfCity transformEntity (CityEntity cityEntity){
         return new WeatherOfCity(
