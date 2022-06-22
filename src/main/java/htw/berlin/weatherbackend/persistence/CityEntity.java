@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class CityEntity {
 //Datenbank mit den Spalten aufgebaut
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private long id;
 
